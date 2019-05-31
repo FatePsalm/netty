@@ -1,0 +1,7 @@
+/target/
+/logs/
+/classes/
+*.classpath
+*.settings
+*.class
+
