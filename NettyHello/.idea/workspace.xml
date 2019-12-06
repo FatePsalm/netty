@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f56eb299-0528-47de-a2d3-4564f0648875" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/client/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/client/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/client/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/client/MultClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/client/MultClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/client/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/server/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/bin/com/server/ServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/libs/netty-all-5.0.0.Alpha2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/libs/netty-all-5.0.0.Alpha2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/src/com/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/src/com/client/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/src/com/client/MultClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/src/com/client/Start.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/src/com/server/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Netty5/src/com/server/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__io_netty_netty_all_4_1_16_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/main/java/club/pinea/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/main/java/club/pinea/client/TimeClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/main/java/club/pinea/message/coder/ByteStringDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/main/java/club/pinea/message/coder/ByteStringEncoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/main/java/club/pinea/message/proto/ProtoBufMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/src/test/java/club/pinea/NettyClientDemo/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/target/classes/META-INF/maven/club.pinea/NettyClientDemo/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/target/classes/META-INF/maven/club.pinea/NettyClientDemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyClientDemo/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/lib/create.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/lib/message.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/lib/protoc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/common/BaseServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/common/IOSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/container/GlobalSessionContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/MessageCTX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/NetMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/bytes/BytesNetMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/coder/ByteStringDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/coder/ByteStringEncoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/object/ObjectNetMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/proto/ProtoBufMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/proto/ProtoBufNetMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/message/string/StringNetMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/server/handler/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/server/queue/ServerQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/socket/custom/NettyServerMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/socket/custom/NettySocketServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/socket/protobuf/ProtoBufServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/socket/protobuf/ProtoBufServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/java/club/pinea/util/ThreadPoolUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/main/resources/message.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/src/test/java/club/pinea/NettyServerDemo/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/NettyServerDemo/target/classes/message.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NettyServerDemo-master/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/bin/com/heart/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/bin/com/heart/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/bin/com/heart/ServerHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/bin/com/heart/ServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/libs/netty-all-5.0.0.Alpha2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/libs/netty-all-5.0.0.Alpha2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/src/com/heart/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netty5heart/src/com/heart/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/lanucher/Lanucher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/server/BananaWebSocketServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/server/WebSocketServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/service/BananaCallBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/serviceimpl/BananaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/util/CODE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/util/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/util/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/java/com/company/util/Return.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/resources/banana.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/resources/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../websocket_demo-master/src/main/resources/map.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/client/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/server/HelloHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1104">
+              <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/plug/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="D:\plug\apache-maven-3.5.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="640" />
+    <option name="height" value="739" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nettyChat" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f56eb299-0528-47de-a2d3-4564f0648875" name="Default Changelist" comment="" />
+      <created>1575598706954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575598706954</updated>
+      <workItem from="1575598708179" duration="990000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="990000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" weight="0.3297587" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/server/HelloHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>NettyHello</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

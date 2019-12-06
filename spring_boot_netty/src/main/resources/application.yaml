@@ -1,0 +1,10 @@
+server:
+  port: 8082
+  servlet:
+    path: /
+netty:
+  service:
+    port: 9001
+spring:
+  freemarker:
+    suffix: html
