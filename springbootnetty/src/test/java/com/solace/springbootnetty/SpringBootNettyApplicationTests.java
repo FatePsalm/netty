@@ -1,4 +1,4 @@
-package com.solace.spring_boot_netty;
+package com.solace.springbootnetty;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

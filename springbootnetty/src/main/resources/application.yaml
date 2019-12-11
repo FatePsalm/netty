@@ -1,0 +1,16 @@
+server:
+  port: 8083
+netty:
+  service:
+    port: 9001
+spring:
+  #thymeleaf 自定义视图配置
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    #开发时关闭缓存,不然没法看到实时页面
+    cache: false
+    mode: HTML5
+    check-template-location: true
+  mvc:
+    static-path-pattern: /static/**

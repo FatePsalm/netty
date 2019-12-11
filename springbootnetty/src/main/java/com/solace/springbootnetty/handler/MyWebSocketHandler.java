@@ -1,4 +1,4 @@
-package com.solace.spring_boot_netty.handler;
+package com.solace.springbootnetty.handler;
 
 import com.alibaba.fastjson.JSON;
 import io.netty.channel.ChannelHandlerContext;
@@ -9,12 +9,11 @@ import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * MyWebSocketHandler
- * WebSocket处理器，处理websocket连接相关
- * @author zhengkai.blog.csdn.net
- * @date 2019-06-12
- */
+ /**
+   * 作者 CG
+   * 时间 2019/12/11 20:35
+   * 注释 WebSocket处理器，处理websocket连接相关
+   */
 public class MyWebSocketHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
 
     @Override

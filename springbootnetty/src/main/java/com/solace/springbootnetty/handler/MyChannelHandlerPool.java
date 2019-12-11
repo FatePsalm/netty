@@ -1,15 +1,14 @@
-package com.solace.spring_boot_netty.handler;
+package com.solace.springbootnetty.handler;
 
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
-/**
- * MyChannelHandlerPool
- * 通道组池，管理所有websocket连接
- * @author zhengkai.blog.csdn.net
- * @date 2019-06-12
- */
+ /**
+   * 作者 CG
+   * 时间 2019/12/11 20:35
+   * 注释 自带管理池
+   */
 public class MyChannelHandlerPool {
 
     public MyChannelHandlerPool(){}

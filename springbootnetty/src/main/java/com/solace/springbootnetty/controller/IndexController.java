@@ -1,4 +1,4 @@
-package com.solace.spring_boot_netty.controller;
+package com.solace.springbootnetty.controller;
 
 import cn.hutool.core.util.RandomUtil;
 import org.springframework.stereotype.Controller;
