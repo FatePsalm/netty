@@ -16,11 +16,11 @@ import io.netty.handler.stream.ChunkedWriteHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/**
- * NettyServer Netty服务器配置
- * @author zhengkai.blog.csdn.net
- * @date 2019-06-12
- */
+ /**
+   * 作者 CG
+   * 时间 2019/12/12 11:59
+   * 注释 服务器启动
+   */
 @Component
 public class NettyServer {
     @Value("${netty.service.port}")

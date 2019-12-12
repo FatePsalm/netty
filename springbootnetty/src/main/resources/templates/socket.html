@@ -3,9 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Netty-Websocket</title>
-  <script src="../static/jquery-1.10.2.min.js" ></script>
+    <script src="../static/jquery-1.10.2.min.js"></script>
     <script type="text/javascript">
         var socket;
+        var userArry = [];
+        var sockerUrl = 'ws://192.168.5.144:9001';
+        var httpUrl = 'http://192.168.5.144:8083';
+        var type = 'web';
+        var myId;
         window.onload = function (ev) {
             if (!window.WebSocket) {
                 window.WebSocket = window.MozWebSocket;
@@ -13,25 +18,30 @@
             if (window.WebSocket) {
                 var url = document.getElementById('uid').value;
                 console.log(url)
-                socket = new WebSocket("ws://127.0.0.1:9001/ws?uid=" + url + "&type=web");
+                socket = new WebSocket(sockerUrl + "/ws?uid=" + url + "&type=" + type);
                 socket.onmessage = function (event) {
                     console.log("onmessage:" + event.data)
-                    var flag=event.data.indexOf('用户')
-                    console.log(flag)
-                    if (flag==-1){
-                        var ta = $('#responseText')[0];
-                        ta.value += event.data + "\r\n";
-                        console.log(1)
-                    } else {
-                        var ta = $('#onlineUsers')[0];
-                        ta.value += event.data + "\r\n";
-                        console.log(2)
+                    var result = JSON.parse(event.data)
+                    var type = result.type
+                    var msg = result.msg
+                    // console.log(result.type)
+                    if (type == 1) {
+                        /*普通消息*/
+                        showMsg(result);
+                    } else if (type == 2) {
+                        /*上线消息*/
+                        downUP(type, msg);
+                    } else if (type == 3) {
+                        /*下线消息*/
+                        downUP(type, msg);
                     }
                 };
                 socket.onopen = function (event) {
                     var ta = document.getElementById('responseText');
                     ta.value = "Netty-WebSocket服务器。。。。。。连接  \r\n"
                 };
+                /*刷新在线用户列表*/
+                userList();
                 socket.onclose = function (event) {
                     var ta = document.getElementById('responseText');
                     ta.value = "Netty-WebSocket服务器。。。。。。关闭 \r\n";
@@ -41,13 +51,39 @@
             }
             $('#sendMsg')[0].onclick = function () {
                 var msg = {
-                    msg:$('#message')[0].value,
-                    sendId:$('#sendUid')[0].value
+                    msg: $('#message')[0].value,
+                    acceptId: $('#acceptId')[0].value
                 }
                 send(JSON.stringify(msg))
             }
         }
 
+        /*处理上下线*/
+        function downUP(type, uuid) {
+            if (type == 2) {
+                /*上线*/
+                userArry.push(uuid);
+            }
+            if (type == 3) {
+                /*下线*/
+                var index = userArry.indexOf(uuid);
+                userArry.splice(index, 1);
+            }
+            showUserList(userArry)
+        }
+
+        /*显示上线下线内容*/
+        function showUserList(userArry) {
+            var onlineUsers = $('#onlineUsers')[0]
+            var html = '';
+            userArry.forEach(function (el) {
+                html += '用户ID:' + el + '\r\n'
+            });
+            console.log('html=' + html)
+            onlineUsers.value = html;
+        }
+
+        /*发送消息*/
         function send(message) {
             if (!window.WebSocket) {
                 return;
@@ -58,20 +94,62 @@
                 alert("WebSocket 连接没有建立成功！");
             }
         }
+
+        /*初始化在线用户列表*/
+        function userList() {
+            $.ajax({
+                url: httpUrl + "/onlineUsers", data: {
+                    type: type
+                }, success: function (result) {
+                    console.log(result)
+                    userArry = result;
+                    showUserList(userArry)
+                    /*初始化用户ID*/
+                    myId = $('#uid')[0].value;
+                }
+            });
+        }
+
+        /*处理聊天消息*/
+        function showMsg(result) {
+            var msg = result.msg
+            var sendId = result.sendId
+            var acceptId = result.acceptId
+            var html = '';
+            if (myId == sendId) {
+                html += '<div style="text-align: right;width:100%;font-size:12px;color: #694FFF"><' + getStrTime() + '>发送{' + acceptId + '}:' + msg + '\r\n</div>'
+            } else {
+                html += '<div style="text-align: left;width:100%;font-size:12px;color: #322579"><' + getStrTime() + '>来自{' + sendId + '}:' + msg + '\r\n</div>'
+            }
+            $('#responseText').append(html)
+            var height = $('#responseText').height()
+            $('#responseTextParent').scrollTop(height)
+        }
+
+        /*获取当前时间*/
+        function getStrTime() {
+            var date = new Date();
+            return date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
+        }
     </script>
 </head>
 <body>
 <form onSubmit="return false;">
     <div style="padding: 20px 0;"> 用户ID <input id="uid" type="text" name="uid" th:value="${uid}" disabled/></div>
     <div style="width:100%;padding: 20px 0;overflow: hidden;border-bottom: 4px solid #ddd;">
-        <div style="padding: 0 20px 0 0;float: left">发送ID <input id="sendUid" type="text" name="sendUid" /></div>
-        <div style="padding: 0 20px 0 20px;float: left">发送内容 </label><input id="message"  name="message" value=""/></div>
-        <input type="button" value="发送ws消息" id="sendMsg" style="padding: 5px 10px;float: left;background:linear-gradient(0deg, #f83b87 0%, #f83bb3 100%) "/>
+        <div style="padding: 0 20px 0 0;float: left">发送ID <input id="acceptId" type="text" name="acceptId"/></div>
+        <div style="padding: 0 20px 0 20px;float: left">发送内容 </label><input id="message" name="message" value=""/></div>
+        <input type="button" value="发送ws消息" id="sendMsg"
+               style="padding: 5px 10px;float: left;background:linear-gradient(0deg, #f83b87 0%, #f83bb3 100%) "/>
     </div>
 
     <div style="width: 48%;height: 300px;float: left;">
         <h3>服务端返回的应答消息</h3>
-        <textarea id="responseText" style="width: 100%;height: 300px;"></textarea>
+        <div id="responseTextParent" style="width: 100%;height: 300px;border: 1px solid rgb(84, 84, 69);overflow-y:scroll">
+            <div id="responseText"></div>
+        </div>
+
+
     </div>
     <div style="width: 48%;height: 300px;float: right;">
         <h3>在线用户列表</h3>

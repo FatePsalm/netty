@@ -2,6 +2,8 @@ package com.solace.springbootnetty.handler;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.solace.springbootnetty.entity.MsgEntity;
+import com.solace.springbootnetty.enums.MsgEnum;
 import com.solace.springbootnetty.util.ChannelPoolMap;
 import com.solace.springbootnetty.enums.ParamEnum;
 import com.solace.springbootnetty.util.AttributeMap;
@@ -30,20 +32,24 @@ public class BusinessWebSocketHandler extends SimpleChannelInboundHandler<TextWe
         String text = textWebSocketFrame.text();
         JSONObject jsonObject = JSON.parseObject(text);
         String uid = stringMap.get(ParamEnum.Param.UID.getValue());
-        String sendId = jsonObject.getString("sendId");
+        String acceptId = jsonObject.getString("acceptId");
         String msg = jsonObject.getString("msg");
-        ChannelUtl.sendList(concurrentMap, Arrays.asList(sendId),"来自{"+uid+"}发送:"+msg);
+        MsgEntity msgEntity = new MsgEntity();
+        msgEntity.setType(MsgEnum.Type.普通消息.getType());
+        msgEntity.setSendId(uid);
+        msgEntity.setAcceptId(acceptId);
+        msgEntity.setMsg(msg);
+        /*给接受者发送消息*/
+        ChannelUtl.sendList(concurrentMap, Arrays.asList(acceptId,uid),JSON.toJSONString(msgEntity));
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         //删除连接池中的用户连接
-        Map<String, String> stringMap = ctx.channel().attr(AttributeMap.PARAMMAP).get();
-        ChannelUtl.removeChatGroup(ParamEnum.ChatType.findType(stringMap), stringMap.get(ParamEnum.Param.UID.getValue()), ctx.channel());
+        ChannelUtl.removeChatGroup(ctx);
     }
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-        Map<String, String> stringMap = ctx.channel().attr(AttributeMap.PARAMMAP).get();
-        ChannelUtl.removeChatGroup(ParamEnum.ChatType.findType(stringMap), stringMap.get(ParamEnum.Param.UID.getValue()), ctx.channel());
+        ChannelUtl.removeChatGroup(ctx);
     }
 }

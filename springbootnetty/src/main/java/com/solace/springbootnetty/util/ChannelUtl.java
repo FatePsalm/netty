@@ -1,5 +1,8 @@
 package com.solace.springbootnetty.util;
 
+import com.alibaba.fastjson.JSON;
+import com.solace.springbootnetty.entity.MsgEntity;
+import com.solace.springbootnetty.enums.MsgEnum;
 import com.solace.springbootnetty.enums.ParamEnum;
 import com.solace.springbootnetty.handler.FullHttpRequestHandler;
 import io.netty.buffer.DefaultByteBufHolder;
@@ -68,14 +71,19 @@ public class ChannelUtl {
        * 时间 2019/12/11 19:52
        * 注释 用户下线
        */
-     public static void removeChatGroup(ParamEnum.ChatType chatType,String uid,Channel channel){
-         ConcurrentMap<String, Channel> type = ChannelPoolMap.getType(chatType);
+     public static void removeChatGroup(ChannelHandlerContext ctx){
+         Map<String, String> stringMap = ctx.channel().attr(AttributeMap.PARAMMAP).get();
+         ConcurrentMap<String, Channel> type = ChannelPoolMap.getType(ParamEnum.ChatType.findType(stringMap));
+         String uid = stringMap.get(ParamEnum.Param.UID.getValue());
          ChannelUtl.remove(type,uid);
-         if (channel.isOpen()) {
-             channel.close();
+         if (ctx.channel().isOpen()) {
+             ctx.channel().close();
          }
          //通知全部用户
-         ChannelUtl.sendAll(type,uid,"用户:"+uid+"下线!");
+         MsgEntity entity = new MsgEntity();
+         entity.setType(MsgEnum.Type.下线消息.getType());
+         entity.setMsg(uid);
+         ChannelUtl.sendAll(type,uid,JSON.toJSONString(entity));
      }
      /**
        * 作者 CG
@@ -88,7 +96,10 @@ public class ChannelUtl {
          //添加
          ChannelUtl.add(type,uid,channel);
          //推送消息
-         ChannelUtl.sendAll(type,uid,"用户:"+uid+"上线!");
+         MsgEntity entity = new MsgEntity();
+         entity.setType(MsgEnum.Type.上线消息.getType());
+         entity.setMsg(uid);
+         ChannelUtl.sendAll(type,uid, JSON.toJSONString(entity));
      }
      /**
        * 作者 CG

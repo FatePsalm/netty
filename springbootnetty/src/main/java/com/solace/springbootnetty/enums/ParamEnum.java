@@ -42,6 +42,15 @@ public class ParamEnum {
              }
              return null;
          }
+         public static ChatType findTypeStr(String type){
+                 ChatType[] values = ChatType.values();
+                 for (ChatType index:values
+                 ) {
+                     if (index.getType().equals(type))
+                         return index;
+                 }
+             return null;
+         }
      }
      /**
        * 作者 CG
