@@ -43,14 +43,14 @@ public class BananaWebSocketServerHandler extends SimpleChannelInboundHandler<Ob
 	private ChannelHandlerContext ctx;
 	private String sessionId;
 
-	@Override
+	/*@Override
 	public void messageReceived(ChannelHandlerContext ctx, Object msg) throws Exception {
 		if (msg instanceof FullHttpRequest) { // 传统的HTTP接入
 			handleHttpRequest(ctx, (FullHttpRequest) msg);
 		} else if (msg instanceof WebSocketFrame) { // WebSocket接入
 			handleWebSocketFrame(ctx, (WebSocketFrame) msg);
 		}
-	}
+	}*/
 
 	@Override
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
@@ -66,7 +66,7 @@ public class BananaWebSocketServerHandler extends SimpleChannelInboundHandler<Ob
 		BananaService.notifyDownline(sessionId); // 通知有人下线
 	}
 
-	@Override
+//	@Override
 	public void close(ChannelHandlerContext ctx, ChannelPromise promise) throws Exception {
 		LOG.info("WebSocket关闭");
 		super.close(ctx, promise);
@@ -247,4 +247,12 @@ public class BananaWebSocketServerHandler extends SimpleChannelInboundHandler<Ob
 		this.ctx.flush();
 	}
 
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object msg) throws Exception {
+        if (msg instanceof FullHttpRequest) { // 传统的HTTP接入
+            handleHttpRequest(ctx, (FullHttpRequest) msg);
+        } else if (msg instanceof WebSocketFrame) { // WebSocket接入
+            handleWebSocketFrame(ctx, (WebSocketFrame) msg);
+        }
+    }
 }

@@ -7,8 +7,8 @@
     <script type="text/javascript">
         var socket;
         var userArry = [];
-        var sockerUrl = 'ws://192.168.5.144:9001';
-        var httpUrl = 'http://192.168.5.144:8083';
+        var sockerUrl = 'ws://127.0.0.1:9001';
+        var httpUrl = 'http://127.0.0.1:8083';
         var type = 'web';
         var myId;
         window.onload = function (ev) {
@@ -37,14 +37,16 @@
                     }
                 };
                 socket.onopen = function (event) {
-                    var ta = document.getElementById('responseText');
-                    ta.value = "Netty-WebSocket服务器。。。。。。连接  \r\n"
+                    var html = '';
+                    html += '<div style="text-align: left;width:100%;font-size:12px;color: #694FFF"><' + getStrTime() + '>Netty-WebSocket服务器。。。。。。连接  \r\n</div>'
+                    $('#responseText').append(html)
                 };
                 /*刷新在线用户列表*/
                 userList();
                 socket.onclose = function (event) {
-                    var ta = document.getElementById('responseText');
-                    ta.value = "Netty-WebSocket服务器。。。。。。关闭 \r\n";
+                    var html = '';
+                    html += '<div style="text-align: left;width:100%;font-size:12px;color: #694FFF"><' + getStrTime() + '>Netty-WebSocket服务器。。。。。。关闭 \r\n</div>'
+                    $('#responseText').append(html)
                 };
             } else {
                 alert("您的浏览器不支持WebSocket协议！");
@@ -98,7 +100,8 @@
         /*初始化在线用户列表*/
         function userList() {
             $.ajax({
-                url: httpUrl + "/onlineUsers", data: {
+                url: httpUrl + "/onlineUsers",
+                data: {
                     type: type
                 }, success: function (result) {
                     console.log(result)

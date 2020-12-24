@@ -1,15 +1,15 @@
 package com.solace.springbootnetty.handler;
 
 import com.solace.springbootnetty.enums.ParamEnum;
-import com.solace.springbootnetty.util.*;
-import io.netty.channel.Channel;
+import com.solace.springbootnetty.util.AttributeMap;
+import com.solace.springbootnetty.util.ChannelUtl;
+import com.solace.springbootnetty.util.RequestUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentMap;
 
 /**
  * 作者 CG
