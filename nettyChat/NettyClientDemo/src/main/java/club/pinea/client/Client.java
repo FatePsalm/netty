@@ -20,7 +20,7 @@ public class Client implements Runnable {
 	}
 	
 	
-	@Override
+//	@Override
 	public void run() {
 //		stringSender();
 		try {
